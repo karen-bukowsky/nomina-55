@@ -24,6 +24,7 @@ save.Beneficiarios= document.getElementById('Ben').value;
 return save;
 
 } 
+
 function calsueldo(){
     let horas = document.getElementById("horas_trabaja").value;
     let pago = document.getElementById("precio_hora").value;
@@ -45,8 +46,9 @@ function crearEmpleado(e){
     let dire =  document.getElementById('address');
     let empleado= document.getElementById('tipo_empleado');
     
+    let id = "" + Math.floor(Math.random() * 999999);
     
-    let e1 = new Empleado (name.value, tel.value, dire.value,apellidos.value, correo.value, empleado.value);
+    let e1 = new Empleado (name.value, tel.value, dire.value,apellidos.value, correo.value, empleado.value, id);
     console.log(e1);
 
     empleados.push(e1);
@@ -60,6 +62,7 @@ function crearEmpleado(e){
     document.getElementById('address').value = '';
     document.getElementById('tipo_empleado').value = '';
     
+
 
 }
 

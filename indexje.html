@@ -17,9 +17,9 @@
       
           <div class="container">
             <div class="row justify-content-center mt 3">
-              <label class="col-1 form-label">Nombre del empleado</label>
+              <label class="col-1 form-label">id del empleado</label>
               <div class="col-3 col-8 col-md-4"><br>
-                <input type="text" class=" form-control" id="Nombre">
+                <input type="text" class=" form-control" id="id">
               </div>
             </div>
           </div>
@@ -95,11 +95,11 @@
               -->
                 <script> function myFunction() {
                    
-                    var persona=Tool.findPersona(document.getElementById("Nombre").value);
+                    var persona=Tool.findPersona(document.getElementById("id").value);
                   console.log(persona);
                   if(persona){
                     var data=getDataForm();
-                    Tool.updatePersona(document.getElementById("Nombre").value,data);
+                    Tool.updatePersona(document.getElementById("id").value,data);
       
                   }
                   else{ alert("No se encontro la Persona")

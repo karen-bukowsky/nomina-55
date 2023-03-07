@@ -1,12 +1,12 @@
 class Tool {
-  static findPersona(nomb) {
+  static findPersona(id) {
     /* metodo para encontrar la persona */
     var objeto = JSON.parse(
       localStorage.getItem("Empleado")
     ); /* se le quita el formato JSON al localstorage para poder interactuar con el  */
 
     var coincidencia = objeto?.find(
-      (name) => name.nombre == nomb
+      (id) => id.id == id
     ); /* ? = se ocupa para la aplicacion no truene cuando la informacion viene null o aun no se carga // find es una funcion que retorna la primer coincidencia de lo que se cumpla*/
     return coincidencia;
   }

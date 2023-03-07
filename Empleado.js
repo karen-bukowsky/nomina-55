@@ -1,4 +1,5 @@
 class Empleado{
+    id;
     nombre;
     telef;
     direccion;
@@ -9,13 +10,14 @@ class Empleado{
     banco =[];
 
 
-    constructor(nom,telef,dire,apelli,correo, empleado){ 
+    constructor(nom,telef,dire,apelli,correo, empleado,id){ 
         this.nombre=nom;
         this.telef=telef;
         this.direccion=dire;
         this.apellidos=apelli;
         this.correo=correo;
         this.empleado=empleado;
+        this.id=id;
     }
     /**
      * 
@@ -35,6 +37,8 @@ agregarBanco = function(Banco){
     let banco = this.banco;
     banco.push(Banco);
   }
+
+
 
     
 
